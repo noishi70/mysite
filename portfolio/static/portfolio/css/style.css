@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css?family=Economica:700");
+
+span.navtitle {
+  font-family: "Economica", sans-serif;
+}
+
+/* 通常のボタン色 */
+.btn-outline-primary,
+.btn-outline-primary.disabled, .btn-outline-primary:disabled {
+  color: mediumturquoise;
+  border-color: mediumturquoise;
+}
+
+/* focusされた時の枠線の色 */
+.btn-outline-primary:focus,
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.1rem mediumturquoise;
+}
+
+/* hover時（マウスカーソルを重ねた時）の色（通常より濃いor暗めの色を指定）*/
+.btn-outline-primary:hover {
+  color:mediumturquoise;
+  background-color:rgb(32, 178, 170,0.20);
+  border-color: mediumturquoise;
+}
+
+/* active時の色（hover時と同等かさらに濃いor暗めの色を指定） */
+.btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active,
+.show > .btn-outline-primary.dropdown-toggle {
+  color:mediumturquoise;
+  background-color: rgb(32, 178, 170,0.20);
+  border-color: mediumturquoise;
+}
+.row>*{
+    margin-top: 3rem;
+}
+.card{
+    margin-top: 3rem;
+    width: 3col;
+}
+.card-deck{
+    width: 9col;
+}

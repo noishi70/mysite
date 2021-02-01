@@ -1,0 +1,191 @@
+{% extends 'portfolio/base.html' %}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+{% load static %}
+
+{% block content %}
+
+<!-- ▼ジャンボトロン -->
+<div class="jumbotron-fluid" style="background:url('/static/portfolio/images/bigimage_bridge.jpg') center;">
+    <div class="container-fluid">
+        <h1 class="display-4 m-auto" style="color:mediumturquoise ;text-align:left;">Kutaragi's Portfolio</h1>
+        <p class="lead m-auto" style="color: powderblue;">
+            Now Time:
+        <h1 id="time" class="display-5" style="color:mediumturquoise;"></h1>
+        <script>
+            time();
+            function time() {
+                var now = new Date();
+                document.getElementById("time").innerHTML = now.toLocaleTimeString();
+            }
+            setInterval('time()', 1000);
+        </script>
+        </p>
+        <hr class="my-4">
+        <p class="lead" style="color: mediumturquoise;">This site is made by Django</p>
+        <a class="btn btn-outline-primary btn-md pt-10 mb-3" href="#" role="button">Learn more</a>
+    </div>
+</div>
+<!-- ▲ジャンボトロン -->
+
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">ポートフォリオの一覧</h1>
+        <p class="lead text-muted">まだ一つも作っていません。</p>
+        <p class="lead text-muted">これから作ります。</p>
+        <p class="lead text-muted">何をつくるかもまだ決まっていません...。</p>
+      </div>
+    </div>
+  </section>
+
+<!-- ▼portfolio-card -->
+<div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+        <div class="col">
+            <div class="card">
+                <img src="{% static "portfolio/images/sar.png" %}" alt="sar" width="100%" height="180">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bigdsssssst longer.
+                    </p>
+                    <div style="text-align:right;">
+                        <a href="#" class="btn btn-outline-secondary">Go Content</a>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="180"
+                    xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
+                    aria-label="Placeholder: Image cap">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#868e96" /><text x="50%" y="50%" fill="#dee2e6"
+                        dy=".3em">Image cap</text>
+                </svg>
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                    <div style="text-align: right;">
+                        <a href="#" class="btn btn-outline-secondary">Go Content</a>
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="180"
+                    xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
+                    aria-label="Placeholder: Image cap">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#868e96" /><text x="50%" y="50%" fill="#dee2e6"
+                        dy=".3em">Image cap</text>
+                </svg>
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                        <div style="text-align: right;">
+                            <a href="#" class="btn btn-outline-secondary">Go Content</a>
+                            </div>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col">
+            <div class="card">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="180"
+                    xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
+                    aria-label="Placeholder: Image cap">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#868e96" /><text x="50%" y="50%" fill="#dee2e6"
+                        dy=".3em">Image cap</text>
+                </svg>
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="180"
+                    xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
+                    aria-label="Placeholder: Image cap">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#868e96" /><text x="50%" y="50%" fill="#dee2e6"
+                        dy=".3em">Image cap</text>
+                </svg>
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="180"
+                    xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
+                    aria-label="Placeholder: Image cap">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#868e96" /><text x="50%" y="50%" fill="#dee2e6"
+                        dy=".3em">Image cap</text>
+                </svg>
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="180"
+                    xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
+                    aria-label="Placeholder: Image cap">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#868e96" /><text x="50%" y="50%" fill="#dee2e6"
+                        dy=".3em">Image cap</text>
+                </svg>
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ▲portfolio-card -->
+
+
+{% endblock %}

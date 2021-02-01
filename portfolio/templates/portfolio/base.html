@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+{% load static %}
+
+<head>
+    <title>Kutaragi's Portfolio(仮)</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/style.css' %}">
+</head>
+
+<body>
+    <!-- ▼ナビゲーションバー -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="{% url 'portfolio:index' %}">
+            <img src="{% static 'portfolio/images/logo.png' %}" alt='logo' width="40" height="40">
+            <span class="navtitle">Kutaragi's Portfolio(仮)</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url "portfolio:introduction" %}">Intoduction</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Portfolio
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">portfolio1</a>
+                        <a class="dropdown-item" href="#">portfolio2</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">My Profile</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- ▲ナビゲーションバー -->
+
+    {% block content %}
+    {% endblock %}
+
+
+</body>
